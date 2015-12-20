@@ -75,8 +75,14 @@ a:hover {
 </section>
 
 <!-- page 3 -->
-<section >
-  <p class="page_title">Who am I</p>
+<section  style="padding: 6em;">
+  <div class="left_div">
+    <p class="page_title">Who am I</p>
+    <p>GitHub: fbukevin</p>
+  </div>
+  <div class="right_div">
+    <img src="github.png">
+  </div>
 </section>
 
 <!-- page 4 -->
@@ -177,6 +183,7 @@ a:hover {
 <script src="d3.v3.min.js"></script>
 <script src="stack.v1.min.js"></script>
 <script>
+// 滑動主程式
 
 var mystack = stack()
     .on("activate", activate)
