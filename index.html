@@ -57,18 +57,13 @@ a:hover {
   line-height: 35px;
 }
 
-code {
-    color: black;
-    font-size: 24px;
-    background-color: grey;
-}
-
 .code {
   background-color: white; 
-  /*border-color: white;*/
+  border-color: lightgreen;
   border-style: solid;
   border-radius: 5px;
-  border: 1px;
+  border-width: 2px;
+  color: black;
 }
 </style>
 
@@ -76,7 +71,7 @@ code {
 <section id="top_page" style="">
   <br><br><br><br>
   <p style="font-size:120%;">暗黑3 告訴你資料長什麼樣子?</p>
-  <p>Veck Hsiao</p>
+  <p>Veck Hsiao @ 2015/12/21</p>
 </section>
 
 <!-- page 2 -->
@@ -111,12 +106,18 @@ code {
 
 <!-- page 5 -->
 <section>
-  <p class="page_title">Open Data</p>
+  <p class="page_title">Open Data</p>  
+  <p>近年來政府單位或組織開放公開資料，促進資料分析、應用與視覺化發展<br>
+    <img src="open_data.png">
+  </p>
 </section>
 
 <!-- page 6 -->
 <section>
   <p class="page_title">Data Visualization</p>
+  <p>將資料集以圖形或動畫的直觀方式呈現
+    <img src="data_visualize.png">
+  </p>
 </section>
 
 <!-- page 7-->
@@ -128,7 +129,7 @@ code {
       <li>by <a href="http://bost.ocks.org/mike/">Mike Bostock</a></li>
       <li>JavaScript 資料視覺化工具</li>
       <li>類 jQuery 的 DOM 操作方式</li>
-      <li>透過 SVG 或 HTML Canvas 呈現資料樣貌</li>
+      <li>透過 SVG 或 Canvas 呈現資料樣貌</li>
       <li>強大的資料處理能力</li>
     </ul>    
   </div>
@@ -188,6 +189,7 @@ code {
   <div class="left_div">
     <p class="page_title">Technology</p>
     <p>CSS</p>
+    <p>設定圖形元件的樣式
   </div>
   <div class="right_div">
     <img src="css3.jpg">
@@ -199,6 +201,7 @@ code {
   <div class="left_div">
     <p class="page_title">Technology</p>
     <p>&ltsvg&gt、HTML &ltcanvas&gt</p>
+    <p>將資料以圖形方式呈現</p>
   </div>
   <div class="right_div">
     <img src="svg.png"><br>
@@ -211,6 +214,7 @@ code {
   <div class="left_div">
     <p class="page_title">Technology</p>
     <p>JavaScript</p>
+    <p>操作與控制資料和圖形元件</p>
   </div>
   <div class="right_div">
     <img src="js.png">
@@ -227,7 +231,7 @@ code {
       <li>Geography: 提供地理資訊的操作</li>
       <li>Geometry: 提供幾何圖形的操作</li>
       <li>Layouts: 提供圖的型態</li>
-      <li>Scales: quantitive(量級) 或 ordinal(序性)處理  (色彩項目也是這裡定義)</li>
+      <li>Scales: quantitive(量級) 或 ordinal(序性)處理</li>
       <li>SVG: SVG 操作</li>
       <li>Time: 時間資訊的操作</li>
     </ul>
@@ -362,7 +366,7 @@ code {
     <p>D3 內建 Layout 類別 - Tree</p>
   </div>
   <div class="right_div">
-    <img src="*.png">
+    <img src="tree.png">
   </div>
 </section>
 
@@ -379,45 +383,190 @@ code {
 <!-- page 27 -->
 <section>
   <p class="page_title">Use D3.js - load library</p>
-  <p><code>&ltscript src="http://d3js.org/d3.v3.min.js"&gt&lt/script&gt</code></p>
+  <p>HTML</p>
+  <div class="code">&ltscript src="http://d3js.org/d3.v3.min.js"&gt&lt/script&gt</div>
 </section>
 
 <!-- page 28 -->
 <section>
-  <p class="page_title">Use D3.js - Select Elemet</p>
-  <div class="code"><code>
-    &ltdiv&gtred
-      &ltdiv&gtblue&lt/div&gt
+  <p class="page_title">Use D3.js - select elemet</p>
+  <p>HTML</p>
+  <div class="code">
+    &ltdiv&gtred<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&ltdiv&gtgreen&lt/div&gt<br>
     &lt/div&gt
-  </code></div>
-  <div class="code"><code>
-    d3.select('div').style({
-      'color': 'red'
-    });
-    d3.select('div div').style({
-      'color': 'blue'
-    });
-  </code></div>
+  </div>
+  <p>JavaScript:</p>
+  <div class="code">
+    d3.<font color="red">select</font>('div').style({ 'color': 'red' });
+    <br>
+    d3.<font color="red">select</font>('div div').style({ 'color': 'green' });
+  </div>
+</section>
+
+<!-- page 26 -->
+<section  style="padding: 6em;">
+  <div class="left_div">
+    <p class="page_title">Use D3.js - select elemet</p>
+    <img src="red_green.png">
+  </div>
+  <div class="right_div">
+    <p>也可以串著寫：
+    <div class="code">
+      d3.select('div').style({ 'color': 'red' })<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.select('div').style({ 'color': 'green' });
+    </div>
+  </div>
 </section>
 
 <!-- page 29 -->
 <section>
-  <p class="page_title">Use D3.js - Select Data</p>
-  <p><code>d3.selectAll('p')</code></p>
+  <p class="page_title">Use D3.js - append element</p>
+  <div class="code">
+  d3.select('body')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<font color="red">append</font>('div')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.html('My name is Veck')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.style({<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'border':'1px solid #000',<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'width':'120px'<br>
+  });
+  </div>
+</section>
+
+<section  style="padding: 6em;">
+  <div class="left_div">
+    <p class="page_title">Use D3.js - append elemet</p>
+    <img src="append.png">
+  </div>
 </section>
 
 <!-- page 30 -->
 <section>
   <p class="page_title">Draw SVG</p>
+  <p>插入 &ltsvg&gt 元素到 &ltbody&gt 中</p>
+  <div class="code">
+  d3.select('body')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append('<font color="red">svg</font>')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.attr({<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'width':200,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'height':200<br>
+  });
+  </div>
+</section>
+
+<section>
+  <p class="page_title">Draw SVG</p>
+  <p>插入 &ltcircle&gt 到 &ltsvg&gt 中來畫圖</p>
+  <div class="code">
+  d3.select('svg')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append('<font color="red">circle</font>')<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.attr({<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cx':50,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'cy':50,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'r':30,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'fill':'#f3b',<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'stroke':'blue',<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'stroke-width':'5px'<br>
+  });
+  </div>
+</section>
+
+<section  style="padding: 6em;">
+  <div class="left_div">
+    <p class="page_title">Draw SVG</p>
+    <img src="draw.png">
+  </div>
+</section>
+
+<section>  
+  <p class="page_title">Data Visualization by D3.js</p>
+  <p>選擇 HTML 元素後，我們可以透過 D3.js 的 <font color="lightgreen"><em>d3.data()<em></font> 來載入資料</p>
+  <div class="code">
+    var dataSet = [1, 2, 3, 4, 5];<br><br>
+    d3.select('body').selectAll('div')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<font color="red">data</font>(dataSet)&nbsp;&nbsp;&nbsp;&nbsp;// load data<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<font color="green">enter</font>()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// "show" data element<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append('div')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text('Hi!');<br>
+  </div>
+</section>
+
+<section  style="padding: 6em;">
+  <div class="left_div">
+    <p class="page_title">Data Visualization by D3.js</p>
+    <img src="hi.png">
+  </div>
+</section>
+
+<section>  
+  <p class="page_title">Data Visualization by D3.js</p>
+  <p>可以透過 callback function 指定 text 內容
+  <div class="code">
+    var dataSet = [1, 2, 3, 4, 5];<br><br>
+    d3.select('body').selectAll('div')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.data(dataSet)&nbsp;&nbsp;&nbsp;&nbsp;// load data<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.enter()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// "show" data element<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append('div')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(<font color="blue">function(d){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return d;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</font>);
+  </div>
+</section>
+
+<section  style="padding: 6em;">
+  <div class="left_div">
+    <p class="page_title">Data Visualization by D3.js</p>
+    <img src="callback.png">
+  </div>
+</section>
+
+<section>  
+  <p class="page_title">Data Visualization by D3.js</p>
+  <p>幫插入的 &ltdiv&gt 設定樣式
+  <div class="code">
+    var dataSet = [1, 2, 3, 4, 5];<br><br>
+    d3.select('body').selectAll('div')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.append('div')<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.text(function(d){&nbsp;&nbsp;return d;&nbsp;&nbsp;})<br>
+    .<font color="red">style</font>({&nbsp;&nbsp;礙於篇幅，請見下頁&nbsp;&nbsp;});
+  </div>
+</section>
+
+<section>  
+  <p class="page_title">Data Visualization by D3.js</p>
+  <p>幫插入的 &ltdiv&gt 設定樣式
+  <div class="code">
+    // 剛剛的 style 內容<br>
+    .style({<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'color':&nbsp;&nbsp;function(d){&nbsp;&nbsp;if(d < 4){&nbsp;&nbsp;return 'red' &nbsp;&nbsp;}&nbsp;&nbsp;},<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'width':&nbsp;&nbsp;function(d){ return d*10 + 'px' },<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'margin':&nbsp;&nbsp;'2px 0',<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'background':&nbsp;&nbsp;'lightgreen'<br>
+    });
+  </div>
+</section>
+
+
+<section  style="padding: 6em;">
+  <div class="left_div">
+    <p class="page_title">Data Visualization by D3.js</p>
+    <img src="style.png">
+  </div>
 </section>
 
 <!-- page 31 -->
 <section>
-  <p class="page_title">Speed up rendering by Canvas</p>
+  <p class="page_title">More</p>
+  <ul>
+    <li>改用 Canvas 來加速繪製</li>
+    <li>透過 d3.csv(), d3.json(), d3.tsv() ... 等函式來載入外部資料</li>
+    <li>套用 Layout 來做出各種不同的資料視覺化圖形</li>
+  </ul> 
 </section>
 <!-- page 32 -->
 <section>
-  <p class="page_title">Demo</p>
+  <p class="page_title"><a href="https://jsfiddle.net/7k6vb91k/">Demo</a></p>
 </section>
 
 <!-- page 33 -->
@@ -425,8 +574,11 @@ code {
   <p class="page_title"> Resource </p>
   <ul>
     <li><a href="http://www.oxxostudio.tw/list.html">OXXO</a></li>
-    <li></li>
-    <li></li>
+    <li><a href="http://blog.infographics.tw/2015/07/optimize-d3-with-canvas/">Canvas 把我的視覺化變「快」了！</a></li>
+    <li><a href="http://blog.infographics.tw">資料視覺化(網站)</a></li>
+    <li><a href="http://www.tableau.com/new-features/9.2">Tableau</a></li>
+    <li><a href="http://www.cloudstitch.com/d3-in-a-box">d3 in box</a></li>
+    <li><a href="https://plot.ly/">Plotly (Python + D3.js)</a></li>
   </ul>
 </section>
 
