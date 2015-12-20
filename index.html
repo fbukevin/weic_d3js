@@ -53,6 +53,9 @@ a:hover {
   text-decoration: underline;
 }
 
+#layout_list {
+  line-height: 35px;
+}
 </style>
 
 <!-- page 1 -->
@@ -89,6 +92,7 @@ a:hover {
 <section >
   <p class="page_title">Spermatozoa</p>
   <div id="sperm"></div>
+  <!--原本是黑底白子，但這樣太噁心，所以改成百底黑子，變成蝌蚪-->
 </section>
 
 <!-- page 5 -->
@@ -122,18 +126,21 @@ a:hover {
 <section>
   <p class="page_title">Technology</p>
   <p>CSS</p>
+  <!-- TODO: 放CSS圖和一句話說明扮演什麼角色(操作資料與繪圖) -->
 </section>
 
 <!-- page 11 -->
 <section>
   <p class="page_title">Technology</p>
   <p>&ltsvg&gt、HTML &ltcanvas&gt</p>
+  <!-- TODO: 放SVG 和 Canvas(or html5)圖和一句話說明扮演什麼角色(操作資料與繪圖) -->
 </section>
 
 <!-- page 12 -->
 <section>
   <p class="page_title">Technology</p>
   <p>JavaScript</p>
+  <!-- TODO: 放JS圖和一句話說明扮演什麼角色(操作資料與繪圖) -->
 </section>
 
 <!-- page 13 -->
@@ -156,6 +163,22 @@ a:hover {
 <!-- page 14 -->
 <section>
   <p class="page_title">Layout</p>
+  <p>D3 內建 Layout 類別
+  <ul id='layout_list'>
+    <li>Bundle</li>
+    <li>Chord</li>
+    <li>Cluster</li>
+    <li>Force</li>
+    <li>Hierarchy</li>
+    <li>Histogram</li>
+    <li>Pack</li>
+    <li>Partition</li>
+    <li>Pie</li>
+    <li>Stack</li>
+    <li>Tree</li>
+    <li>Treemap</li>
+  </ul>
+  </p>
 </section>
 
 <!-- page 15 -->
@@ -190,6 +213,8 @@ a:hover {
 <!-- final page  -->
 <section >
   <p class="page_title">Q & A</a>
+  <p>Slide: <a href="https://fbukevin.github.io/stack">https://fbukevin.github.io/stack</a></p>
+  <p>Contact: fbukevin@gmail.com</p>
 </section>
 
 <script src="d3.v3.min.js"></script>
